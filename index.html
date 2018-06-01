@@ -30,14 +30,56 @@
 
     <form id="survey-form">
 
-      <label for="name" id="name-label">Name: </label>
-      <input type="text" id="name" name="name" placeholder="Enter your name..." required />
+      <section>
+        <h2>General Info:</h2>
+        <label for="name" id="name-label">Name: </label>
+        <input type="text" id="name" name="name" placeholder="Enter your name..." required />
 
-      <label for="email" id="email-label">Email: </label>
-      <input type="email" id="email" name="email" placeholder="Enter your email..." required/>
+        <label for="email" id="email-label">Email: </label>
+        <input type="email" id="email" name="email" placeholder="Enter your email..." required/>
 
-      <label for="number" id="number-label">Number: </label>
-      <input type="number" id="number" name="number" min="0" max="1000000" placeholder="0" required/>
+        <label for="number" id="number-label">Number: </label>
+        <input type="number" id="number" name="number" min="0" max="1000000" placeholder="0" required/>
+
+      </section>
+
+      <section>
+        <h2>You're Learning:</h2>
+        <select name="languages" id="dropdown">
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="ruby">Ruby</option>
+          <option value="go">Go</option>
+          <option value="rust">Rust</option>
+        </select>
+      </section>
+
+      <section>
+        <h2>Interests:</h2>
+        <fieldset>
+          <legend>Do you like or love programming?</legend>
+          <label for="like">Like</label>
+          <input type="radio" name="like-love" id="like" value="like">
+          <label for="love">Love</label>
+          <input type="radio" name="like-love" id="love" value="love">
+        </fieldset>
+      </section>
+
+      <section>
+        <h2>Hard Hitting Questions:</h2>
+        <h3>Do you like peanut-butter, jelly, or both?</h3>
+        <label for="checkbox1">Peanut-Butter</label>
+        <input type="checkbox" name="" id="checkbox1" value="peanut-butter">
+        <label for="checkbox2">Jelly</label>
+        <input type="checkbox" name="" id="checkbox2" value="jelly">
+      </section>
+      
+      <section>
+        <h2>Additional Comments?</h2>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+      </section>
+
+      <button type="submit" id="submit">Submit</button>
     </form>
 
   </main>
